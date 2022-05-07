@@ -35,6 +35,9 @@ button {
 }
 .link {
   text-decoration: none;
+  transition-property: color, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .list {
   list-style: none;
@@ -74,9 +77,6 @@ button {
   letter-spacing: 0.02em;
   color: #212121;
   display: flex;
-  transition-property: color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-nav-list :hover,
 .header-nav-list :focus {
@@ -117,9 +117,6 @@ button {
   display: flex;
   margin-left: auto;
   align-items: center;
-  transition-property: fill, color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-contaсt :hover,
 .header-contaсt :focus {
@@ -189,13 +186,6 @@ button {
   border-radius: 4px;
   cursor: pointer;
   margin: auto;
-  transition-property: background-color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.main-section-header-button:hover,
-.main-section-header-button:focus {
-  background-color: #2196f3;
 }
 .soft-skils-about {
   background: #ffffff;
@@ -399,7 +389,7 @@ button {
   justify-content: center;
   align-items: center;
   fill: #afb1b8;
-  transition-property: box-shadow, border-radius, background-color, color;
+  transition-property: border fill;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -436,12 +426,17 @@ button {
   display: flex;
   flex-direction: column;
   transition-property: color;
-  transition-duration: 250ms;
+  transition-duration: 2500ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-contakts-list :hover,
 .footer-contakts-list :focus {
   color: #2196f3;
+}
+.footer-contakts-list-title {
+  transition-property: color;
+  transition-duration: 2500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-contakts-list-title:not(:last-child) {
   margin-bottom: 10px;
@@ -509,7 +504,7 @@ button {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.2);
-  transition: opacitay 250ms, visibility 250ms;
+  transition: opacity 250ms, visibility 250ms;
 }
 .backdrop.is-hidden .modal {
   transform: scale(0.2) rotate(90deg) skew(-75deg, -10deg);
@@ -522,7 +517,7 @@ button {
   position: absolute;
   top: 50%;
   left: 50%;
-  transition: transform 1000ms;
+  transition: transform 250ms;
   transform: translate(-50%, -50%) scale(1) rotate(0deg) skew(0deg, 0deg);
 }
 .modal-close-btn {
@@ -539,6 +534,7 @@ button {
   position: absolute;
   top: 50%;
   left: 50%;
+  transition: transform 500ms;
   transform: translate(-50%, -50%);
 }
 .is-hidden {
