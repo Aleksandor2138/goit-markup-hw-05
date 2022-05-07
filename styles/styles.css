@@ -40,6 +40,7 @@ button {
   list-style: none;
 }
 .header {
+  position: relative;
   background-color: #ffffff;
   --color-text-header: #212121;
   --color-text-contact: #757575;
@@ -75,12 +76,25 @@ button {
   display: flex;
   transition-property: color;
   transition-duration: 250ms;
-  transition-timing-function: cubic-bezier (0.4, 0, 0.2, 1);
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-nav-list :hover,
 .header-nav-list :focus {
   color: #2196f3;
 }
+.header-nav-item {
+  display: flex;
+}
+.header-nav-item::after {
+  content: "";
+  position: absolute;
+  top: 99%;
+  width: 48px;
+  height: 4px;
+  background: #2196f3;
+  border-radius: 2px;
+}
+
 .header-nav-list :not(:last-child) {
   margin-right: 50px;
 }
@@ -488,4 +502,47 @@ button {
 .footer-soc-link:hover,
 .footer-soc-link:focus {
   background-color: #2196f3;
+}
+.backdrop {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  transition: opacitay 250ms, visibility 250ms;
+}
+.backdrop.is-hidden .modal {
+  transform: scale(0.2) rotate(90deg) skew(-75deg, -10deg);
+}
+.modal {
+  width: 528px;
+  min-height: 581px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transition: transform 1000ms;
+  transform: translate(-50%, -50%) scale(1) rotate(0deg) skew(0deg, 0deg);
+}
+.modal-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.modal-close-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
 }

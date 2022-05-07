@@ -30,7 +30,7 @@
         >
         <nav class="header-nav">
           <ul class="header-nav-list list">
-            <li>
+            <li class="header-nav-item">
               <a class="header-nav-list-st link" href="./index.html">Студия</a>
             </li>
             <li>
@@ -69,7 +69,7 @@
           <h1 class="main-section-header-motto">
             ЭФФЕКТИВНЫЕ РЕШЕНИЯ <br />ДЛЯ ВАШЕГО БИЗНЕСА
           </h1>
-          <button class="main-section-header-button" type="button">
+          <button class="main-section-header-button" type="button" data-modal-open>
             Заказать услугу
           </button>
         </div>
@@ -454,5 +454,12 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="modal-close-btn" data-modal-close><svg class="modal-close-icon" width="18" height="18">
+                    <use href="./img/icons.svg#icon-close-black-18dp" ></use></svg</button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
